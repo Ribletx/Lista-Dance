@@ -1,11 +1,12 @@
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
-import { useLanguage } from '../context/LanguageContext'; // Importamos el hook del contexto
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Footer() {
   const { translations } = useLanguage(); // Usamos el contexto para acceder a las traducciones
 
   // Comprobamos si translations y translations.footerText están disponibles
-  const footerText = translations?.footerText || "© {year} Nuestro Footer xd like si lees esto. Todos los derechos reservados.";
+  const footerText = translations.foot;
+
 
   return (
     <footer className="w-full bg-gradient-to-r from-gray-700 to-gray-900 text-white py-6 flex flex-col items-center justify-center">

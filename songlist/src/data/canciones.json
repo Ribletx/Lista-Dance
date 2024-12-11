@@ -1,0 +1,325 @@
+{
+  "status": "ok",
+  "canciones": [
+      {
+          "nombre": "Bad Guy",
+          "artista": "Billie Eilish",
+          "imagen": ""
+      },
+      {
+          "nombre": "Con Altura",
+          "artista": "Rosalía & J Balvin ft. El Guincho",
+          "imagen": ""
+      },
+      {
+          "nombre": "I Gotta Feeling",
+          "artista": "The Black Eyed Peas",
+          "imagen": ""
+      },
+      {
+          "nombre": "Uptown Funk",
+          "artista": "Mark Ronson ft. Bruno Mars",
+          "imagen": ""
+      },
+      {
+          "nombre": "Bang Bang",
+          "artista": "Jessie J, Ariana Grande & Nicki Minaj",
+          "imagen": ""
+      },
+      {
+          "nombre": "Let It Go",
+          "artista": "Idina Menzel (de la película Frozen)",
+          "imagen": ""
+      },
+      {
+          "nombre": "Soy Yo",
+          "artista": "Bomba Estéreo",
+          "imagen": ""
+      },
+      {
+          "nombre": "Rasputin",
+          "artista": "Boney M.",
+          "imagen": ""
+      },
+      {
+          "nombre": "Dynamite",
+          "artista": "BTS",
+          "imagen": ""
+      },
+      {
+          "nombre": "Dynamite",
+          "artista": "Taio Cruz",
+          "imagen": ""
+      },
+      {
+          "nombre": "Timber",
+          "artista": "Pitbull ft. Kesha",
+          "imagen": ""
+      },
+      {
+          "nombre": "Limbo",
+          "artista": "Daddy Yankee",
+          "imagen": ""
+      },
+      {
+          "nombre": "Last Friday Night",
+          "artista": "Katy Perry",
+          "imagen": ""
+      },
+      {
+          "nombre": "You're the One That I Want",
+          "artista": "John Travolta y Olivia Newton-John",
+          "imagen": ""
+      },
+      {
+          "nombre": "Jingle Bells",
+          "artista": "Santa Clones",
+          "imagen": ""
+      },
+      {
+          "nombre": "Radical",
+          "artista": "Dyro & Dannic",
+          "imagen": ""
+      },
+      {
+          "nombre": "Animals",
+          "artista": "Martin Garrix",
+          "imagen": ""
+      },
+      {
+          "nombre": "Despacito",
+          "artista": "Luis Fonsi ft. Daddy Yankee",
+          "imagen": ""
+      },
+      {
+          "nombre": "Shape of You",
+          "artista": "Ed Sheeran",
+          "imagen": ""
+      },
+      {
+          "nombre": "Gangnam Style",
+          "artista": "PSY",
+          "imagen": ""
+      },
+      {
+          "nombre": "Sorry",
+          "artista": "Justin Bieber",
+          "imagen": ""
+      },
+      {
+          "nombre": "Sugar",
+          "artista": "Maroon 5",
+          "imagen": ""
+      },
+      {
+          "nombre": "Roar",
+          "artista": "Katy Perry",
+          "imagen": ""
+      },
+      {
+          "nombre": "I Need Your Love",
+          "artista": "Calvin Harris ft. Ellie Goulding",
+          "imagen": ""
+      },
+      {
+          "nombre": "Blinding Lights",
+          "artista": "The Weeknd",
+          "imagen": ""
+      },
+      {
+          "nombre": "Someone You Loved",
+          "artista": "Lewis Capaldi",
+          "imagen": ""
+      },
+      {
+          "nombre": "Dance Monkey",
+          "artista": "Tones and I",
+          "imagen": ""
+      },
+      {
+          "nombre": "Old Town Road",
+          "artista": "Lil Nas X",
+          "imagen": ""
+      },
+      {
+          "nombre": "Sunflower",
+          "artista": "Post Malone & Swae Lee",
+          "imagen": ""
+      },
+      {
+          "nombre": "Stay",
+          "artista": "The Kid LAROI & Justin Bieber",
+          "imagen": ""
+      },
+      {
+          "nombre": "Bad Habits",
+          "artista": "Ed Sheeran",
+          "imagen": ""
+      },
+      {
+          "nombre": "Levitating",
+          "artista": "Dua Lipa ft. DaBaby",
+          "imagen": ""
+      },
+      {
+          "nombre": "Don’t Start Now",
+          "artista": "Dua Lipa",
+          "imagen": ""
+      },
+      {
+          "nombre": "Tusa",
+          "artista": "Karol G & Nicki Minaj",
+          "imagen": ""
+      },
+      {
+          "nombre": "Lambada",
+          "artista": "Kaoma",
+          "imagen": ""
+      },
+      {
+          "nombre": "Hips Don’t Lie",
+          "artista": "Shakira ft. Wyclef Jean",
+          "imagen": ""
+      },
+      {
+          "nombre": "Waka Waka (This Time for Africa)",
+          "artista": "Shakira",
+          "imagen": ""
+      },
+      {
+          "nombre": "La Bicicleta",
+          "artista": "Carlos Vives & Shakira",
+          "imagen": ""
+      },
+      {
+          "nombre": "Bailando",
+          "artista": "Enrique Iglesias ft. Gente de Zona",
+          "imagen": ""
+      },
+      {
+          "nombre": "Cheap Thrills",
+          "artista": "Sia ft. Sean Paul",
+          "imagen": ""
+      },
+      {
+          "nombre": "24K Magic",
+          "artista": "Bruno Mars",
+          "imagen": ""
+      },
+      {
+          "nombre": "Treasure",
+          "artista": "Bruno Mars",
+          "imagen": ""
+      },
+      {
+          "nombre": "Can’t Stop the Feeling!",
+          "artista": "Justin Timberlake",
+          "imagen": ""
+      },
+      {
+          "nombre": "Firework",
+          "artista": "Katy Perry",
+          "imagen": ""
+      },
+      {
+          "nombre": "California Gurls",
+          "artista": "Katy Perry ft. Snoop Dogg",
+          "imagen": ""
+      },
+      {
+          "nombre": "Get Lucky",
+          "artista": "Daft Punk ft. Pharrell Williams",
+          "imagen": ""
+      },
+      {
+          "nombre": "Happy",
+          "artista": "Pharrell Williams",
+          "imagen": ""
+      },
+      {
+          "nombre": "Titanium",
+          "artista": "David Guetta ft. Sia",
+          "imagen": ""
+      },
+      {
+          "nombre": "Wake Me Up",
+          "artista": "Avicii",
+          "imagen": ""
+      },
+      {
+          "nombre": "Levels",
+          "artista": "Avicii",
+          "imagen": ""
+      },
+      {
+          "nombre": "Lean On",
+          "artista": "Major Lazer & DJ Snake ft. MØ",
+          "imagen": ""
+      },
+      {
+          "nombre": "Where Are Ü Now",
+          "artista": "Skrillex & Diplo ft. Justin Bieber",
+          "imagen": ""
+      },
+      {
+          "nombre": "Who Let The Dogs Out",
+          "artista": "Baha Men",
+          "imagen": ""
+      },
+      {
+          "nombre": "Starships",
+          "artista": "Nicki Minaj",
+          "imagen": ""
+      },
+      {
+          "nombre": "Call Me Maybe",
+          "artista": "Carly Rae Jepsen",
+          "imagen": ""
+      },
+      {
+          "nombre": "Worth It",
+          "artista": "Fifth Harmony ft. Kid Ink",
+          "imagen": ""
+      },
+      {
+          "nombre": "Daddy",
+          "artista": "PSY ft. CL of 2NE1",
+          "imagen": ""
+      },
+      {
+          "nombre": "Carnaval Boom",
+          "artista": "Latino Sunset",
+          "imagen": ""
+      },
+      {
+          "nombre": "Don't Wanna Know",
+          "artista": "Maroon 5",
+          "imagen": ""
+      },
+      {
+          "nombre": "APT",
+          "artista": "Bruno Mars y Rosé",
+          "imagen": ""
+      },
+      {
+          "nombre": "Don't Stop Me Now",
+          "artista": "Queen",
+          "imagen": ""
+      },
+      {
+          "nombre": "Last Christmas",
+          "artista": "Santa Clones",
+          "imagen": ""
+      },
+      {
+          "nombre": "Break Free",
+          "artista": "Ariana Grande ft. Zedd",
+          "imagen": ""
+      },
+      {
+          "nombre": "Aserejé",
+          "artista": "Las Ketchup",
+          "imagen": ""
+      }
+  ]
+}

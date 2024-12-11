@@ -1,55 +1,89 @@
-"use client";
+"use client"; // Marca el archivo para ser procesado en el cliente
 
-import { useLanguage } from './context/LanguageContext'; // Ajusta la ruta para importar el contexto de idioma
-import Header from './components/header';
-import Footer from './components/footer';
-import Link from "next/link";
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import { useLanguage } from "./context/LanguageContext"; // Importa el contexto de idioma
+import Header from "./components/header"; // Importar el componente Header
+import Footer from "./components/footer"; // Importar el componente Footer
+import cancionesData from "../data/canciones.json"; // Ajusta la ruta si es necesario
 
-export default function Home() {
-  const { translations } = useLanguage(); // Obtener las traducciones del contexto
-  const [isMounted, setIsMounted] = useState(false); // Estado para controlar la hidratación
+const Canciones = () => {
+  const { translations } = useLanguage(); // Usar el contexto de idioma
+  const [busqueda, setBusqueda] = useState(""); // Término de búsqueda
+  const [cancionesFiltradas, setCancionesFiltradas] = useState(cancionesData.canciones); // Accede a la clave 'canciones'
 
-  // Asegurarse de que el componente solo se renderice en el cliente
+  // Maneja la búsqueda
+  const manejarBusqueda = (e) => {
+    setBusqueda(e.target.value.toLowerCase());
+  };
+
+  // Filtra las canciones cada vez que cambia la búsqueda
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) return null; // No renderizar nada hasta que se haya montado el componente en el cliente
+    const filtradas = cancionesData.canciones.filter(  // Accede a la clave 'canciones'
+      (cancion) =>
+        cancion.nombre.toLowerCase().includes(busqueda) ||
+        cancion.artista.toLowerCase().includes(busqueda)
+    );
+    setCancionesFiltradas(filtradas);
+  }, [busqueda]);
 
   return (
-    <div 
-      className="min-h-screen flex flex-col text-white bg-cover bg-center" 
-      style={{ backgroundImage: "url('/fondo.png')" }}
+    <div
+      className="min-h-screen flex flex-col bg-cover bg-center"
+      style={{ backgroundImage: "url('/fondo.png')" }} // Imagen de fondo
     >
-      <Header />
+      <Header /> {/* Componente Header */}
 
-      <main className="flex-grow flex flex-col items-center justify-center px-4 md:px-8">
-        <div className="bg-gray-700 bg-opacity-60 p-8 rounded-lg shadow-xl text-center w-full max-w-md">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            {translations.mainTitle} {/* Título traducido */}
-          </h1>
-
-          {/* Contenedor de los botones usando flex */}
-          <div className="mt-6 flex flex-row justify-center space-x-6">
-            {/* Botón para ir a la sección de Juegos */}
-            <Link href="/juegos">
-              <button className="bg-blue-600 hover:bg-red-700 text-white py-3 px-6 rounded-lg text-lg font-semibold transition transform hover:scale-105 shadow-md">
-                {translations.gameButton} {/* Texto del botón traducido */}
-              </button>
-            </Link>
-
-            {/* Botón para ir a la sección de Textos */}
-            <Link href="/textos">
-              <button className="bg-red-500 hover:bg-blue-700 text-white py-3 px-6 rounded-lg text-lg font-semibold transition transform hover:scale-105 shadow-md">
-                {translations.textButton} {/* Texto del botón traducido */}
-              </button>
-            </Link>
-          </div>
+      <main className="flex-grow flex flex-col items-center px-4 md:px-8">
+        <div className="w-full max-w-3xl mt-6">
+          <input
+            type="text"
+            placeholder={translations.busqueda} // Texto del contexto de idioma
+            value={busqueda}
+            onChange={manejarBusqueda}
+            className="w-full p-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-blue-500"
+          />
         </div>
+
+        {/* Contenedor de canciones en una columna (flex-col) */}
+        <div
+          className="flex flex-col gap-6 my-8 w-full max-w-3xl" // Aseguramos que las tarjetas tengan el mismo tamaño que la barra de búsqueda
+          style={{ padding: "0 10px", boxSizing: "border-box" }}
+        >
+          {cancionesFiltradas.map((cancion, index) => (
+            <div
+              key={index}
+              className="bg-gray-800 bg-opacity-95 p-6 rounded-lg shadow-lg flex items-center text-left w-full transition-all duration-300 transform hover:bg-gray-700 hover:scale-105 hover:shadow-xl"
+            >
+              {/* Imagen */}
+              <div className="cursor-pointer mr-6">
+                <img
+                  src={cancion.imagen || "/default-image.jpg"} // Imagen por defecto si no hay imagen
+                  alt={cancion.nombre}
+                  className="w-24 h-24 object-cover rounded transition-all duration-300"
+                />
+              </div>
+
+              {/* Información de la canción */}
+              <div className="flex flex-col w-full justify-center">
+                <h2 className="text-2xl font-semibold text-gray-300 transition-all duration-300 hover:text-white">
+                  {cancion.nombre}
+                </h2>
+                <p className="text-lg text-gray-300 transition-all duration-300 hover:text-white">
+                  {cancion.artista}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {cancionesFiltradas.length === 0 && (
+          <p className="text-gray-500 mt-4">{translations.noResults}</p> // Utilizar el texto del contexto de idioma
+        )}
       </main>
 
-      <Footer />
+      <Footer /> {/* Componente Footer */}
     </div>
   );
-}
+};
+
+export default Canciones;
