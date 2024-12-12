@@ -28,8 +28,8 @@ const Canciones = () => {
 
   return (
     <div
-      className="min-h-screen flex flex-col bg-cover bg-center"
-      style={{ backgroundImage: "url('/fondo.png')" }} // Imagen de fondo
+      className="min-h-screen flex flex-col bg-repeat bg-top"
+      style={{ backgroundImage: "url('/fondogen.webp')" }} // Imagen de fondo
     >
       <Header /> {/* Componente Header */}
 
@@ -46,7 +46,7 @@ const Canciones = () => {
 
         {/* Contenedor de canciones en una columna (flex-col) */}
         <div
-          className="flex flex-col gap-6 my-8 w-full max-w-3xl" // Aseguramos que las tarjetas tengan el mismo tamaño que la barra de búsqueda
+          className="flex flex-col gap-6 my-8 w-full max-w-3xl"
           style={{ padding: "0 10px", boxSizing: "border-box" }}
         >
           {cancionesFiltradas.map((cancion, index) => (
@@ -57,18 +57,21 @@ const Canciones = () => {
               {/* Imagen */}
               <div className="cursor-pointer mr-6">
                 <img
-                  src={cancion.imagen || "/default-image.jpg"} // Imagen por defecto si no hay imagen
+                  src={cancion.imagen ? `/Portadas/${cancion.imagen}` : "/default.png"}
                   alt={cancion.nombre}
                   className="w-24 h-24 object-cover rounded transition-all duration-300"
                 />
               </div>
 
               {/* Información de la canción */}
-              <div className="flex flex-col w-full justify-center">
-                <h2 className="text-2xl font-semibold text-gray-300 transition-all duration-300 hover:text-white">
+              <div className="flex flex-col sm:flex-row w-full justify-between items-center">
+                {/* Nombre centrado */}
+                <h2 className="text-2xl font-semibold text-gray-300 transition-all duration-300 hover:text-white text-center sm:text-left">
                   {cancion.nombre}
                 </h2>
-                <p className="text-lg text-gray-300 transition-all duration-300 hover:text-white">
+
+                {/* Autor al lado */}
+                <p className="text-lg text-gray-300 transition-all duration-300 hover:text-white sm:ml-6">
                   {cancion.artista}
                 </p>
               </div>
