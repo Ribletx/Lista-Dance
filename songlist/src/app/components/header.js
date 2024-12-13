@@ -62,13 +62,13 @@ export default function Header() {
       </h1>
 
       {/* Botón para agregar nueva canción como círculo */}
-      <div className="absolute bottom-4 right-4">
+      {/*<div className="absolute bottom-4 right-4">
         <Link href="/nueva">
           <button className="w-12 h-12 bg-purple-800 text-white rounded-full flex items-center justify-center text-3xl hover:bg-purple-900 transition-all duration-300">
             +
           </button>
         </Link>
-      </div>
+      </div>*/}
 
     </header>
   );
